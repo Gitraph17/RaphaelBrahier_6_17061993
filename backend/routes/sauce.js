@@ -1,11 +1,13 @@
+// ROUTES "SAUCES"
+
+// Imports
 const express = require("express");
 const router = express.Router();
-require('dotenv').config();
-
 const auth = require("../middleware/auth")
 const sauceCtrl = require("../controllers/sauce");
 const multer = require("../middleware/multer-config");
 
+// Routes
 router.post("/", auth, multer, sauceCtrl.createSauce);
 router.get("/", auth, sauceCtrl.getAllSauces);
 router.get("/:id", auth, sauceCtrl.getOneSauce);

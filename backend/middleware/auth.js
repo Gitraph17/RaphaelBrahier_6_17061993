@@ -1,3 +1,6 @@
+// MIDDLEWARE DE CONTROLE D'AUTORISATION PAR TOKEN
+
+// Imports
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
